@@ -446,7 +446,15 @@ exports[`renders ./components/avatar/demo/toggle-debug.md correctly 1`] = `
     type="button"
   >
     <span>
-      Toggle Avatar
+      Toggle Avatar visibility
+    </span>
+  </button>
+  <button
+    class="ant-btn"
+    type="button"
+  >
+    <span>
+      Toggle Avatar size
     </span>
   </button>
   <span
