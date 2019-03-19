@@ -20,6 +20,7 @@ module.exports = {
     'app.component.examples': 'Examples',
     'app.component.examples.expand': 'Expand all code',
     'app.component.examples.collpse': 'Collpse all code',
+    'app.demo.debug': "Debug only, won't display at online",
     'app.demo.copy': 'Copy code',
     'app.demo.copied': 'Copied!',
     'app.demo.codepen': 'Open in CodePen',

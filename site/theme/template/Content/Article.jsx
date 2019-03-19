@@ -5,7 +5,6 @@ import DocumentTitle from 'react-document-title';
 import { getChildren } from 'jsonml.js/lib/utils';
 import { Timeline, Alert, Affix } from 'antd';
 import EditButton from './EditButton';
-import { ping } from '../utils';
 
 export default class Article extends React.Component {
   static contextTypes = {
@@ -14,26 +13,6 @@ export default class Article extends React.Component {
 
   componentDidMount() {
     this.componentDidUpdate();
-  }
-
-  componentDidUpdate() {
-    const links = [...document.querySelectorAll('.outside-link.internal')];
-    if (links.length === 0) {
-      return;
-    }
-    this.pingTimer = ping(status => {
-      if (status !== 'timeout' && status !== 'error') {
-        links.forEach(link => {
-          link.style.display = 'block'; // eslint-disable-line
-        });
-      } else {
-        links.forEach(link => link.parentNode.removeChild(link));
-      }
-    });
-  }
-
-  componentWillUnmount() {
-    clearTimeout(this.pingTimer);
   }
 
   onResourceClick = e => {
