@@ -43,7 +43,7 @@ const columns = [
     title: 'Action',
     key: 'operation',
     fixed: 'right',
-    width: 100,
+    width: 0,
     render: () => <a href="javascript:;">action</a>,
   },
 ];
